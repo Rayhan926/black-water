@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Lufga-Regular";
+    src: url("./lufga-regular.otf");
+}
+@font-face {
+    font-family: "Lufga-Semibold";
+    src: url("./lufga-semibold.otf");
+}
+@font-face {
+    font-family: "Lufga-Bold";
+    src: url("./lufga-bold.otf");
+}
