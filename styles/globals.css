@@ -12,10 +12,13 @@ body {
       @apply text-white text-5xl md:text-6xl font-lufga-bold font-bold !leading-[140%];
    }
    .title_md {
-      @apply text-white text-3xl md:text-4xl font-lufga-bold font-bold !leading-[140%];
+      @apply text-white text-3xl md:text-4xl font-lufga-bold font-bold !leading-[120%];
    }
    .title_sm {
       @apply text-white text-xl md:text-2xl font-lufga-bold font-bold !leading-[89%];
+   }
+   .title_xs {
+      @apply text-white text-base md:text-lg font-lufga-bold font-bold !leading-[89%];
    }
    .subtitle_md {
       @apply text-gray text-base font-inter font-normal !leading-[156.5%];
@@ -23,4 +26,68 @@ body {
    .subtitle_sm {
       @apply text-gray text-sm font-inter font-normal !leading-[156.5%];
    }
+   .container {
+      @apply px-5 xl:px-0 xl:max-w-[1110px] mx-auto;
+   }
+   .container_sm {
+      @apply px-5 lg:px-0 lg:w-[920px] mx-auto;
+   }
+}
+
+@layer utilities {
+   .gradient_contact_text {
+      background: linear-gradient(270deg, #2e27fe 0%, #9a12ff 73.96%, #cd05ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+   }
+   .white_contact_text {
+      background: linear-gradient(270deg, #fff 0%, #fff 73.96%, #fff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+   }
+}
+
+.gradient_future {
+   background: linear-gradient(180deg, #2e27fe 0%, #9a12ff 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+   /* text-fill-color: transparent; */
+}
+
+.gradeint_bordered_btn {
+   background: linear-gradient(#000, #000) padding-box,
+      linear-gradient(270deg, #2e27fe 0%, #9a12ff 73.96%, #cd05ff 100%) border-box;
+   @apply font-inter duration-150 font-bold text-sm text-white px-[45px] py-3 border-[1.5px] border-transparent rounded-full;
+}
+.gradeint_bordered_btn:hover {
+   background: linear-gradient(#000, #000) padding-box,
+      linear-gradient(90deg, #2e27fe 0%, #9a12ff 73.96%, #cd05ff 100%) border-box;
+}
+
+.gradeint_btn {
+   background: linear-gradient(transparent, transparent) padding-box,
+      linear-gradient(270deg, #2e27fe 0%, #9a12ff 73.96%, #cd05ff 100%) border-box;
+   @apply font-inter duration-150 font-bold text-sm text-white px-[45px] py-3 border-[1.5px] border-transparent rounded-full;
+}
+.gradeint_btn:hover {
+   background: linear-gradient(transparent, transparent) padding-box,
+      linear-gradient(90deg, #2e27fe 0%, #9a12ff 73.96%, #cd05ff 100%) border-box;
+}
+
+#pagination_elm .swiper-pagination-bullet {
+   width: 11px !important;
+   height: 11px !important;
+   background: #312e35 !important;
+   opacity: 1 !important;
+   cursor: pointer;
+}
+#pagination_elm .swiper-pagination-bullet.swiper-pagination-bullet-active {
+   background: linear-gradient(180deg, #2e27fe 0%, #9a12ff 100%) !important;
+}
+
+.currently_open {
+   @apply bg-[#0C0A11] rounded-[30px];
 }

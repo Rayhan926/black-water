@@ -1,4 +1,13 @@
 import Head from 'next/head'
+import FaqSection from '../components/FaqSection'
+import Footer from '../components/Footer'
+import GetStarted from '../components/GetStarted'
+import Header from '../components/Header'
+import HeroSection from '../components/HeroSection'
+import PricingSection from '../components/PricingSection'
+import SponsorsSection from '../components/SponsorsSection'
+import TestimonialSection from '../components/TestimonialSection'
+import VideoSection from '../components/VideoSection'
 
 export default function Home() {
   return (
@@ -9,7 +18,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="w-[650px] border border-white/20 p-5 mx-auto my-10 space-y-8">
+      <Header />
+      <HeroSection />
+      <VideoSection />
+      <SponsorsSection />
+      <PricingSection />
+      <TestimonialSection />
+      <FaqSection />
+      <GetStarted />
+      <Footer />
+
+      {/* <div className="w-[650px] border border-white/20 p-5 mx-auto my-10 space-y-8">
         <h2 className="title_lg">Lorem ipsum dolor sit amet.</h2>
         <h2 className="title_md">Lorem ipsum dolor sit amet.</h2>
         <h2 className="title_sm">Lorem ipsum dolor sit amet.</h2>
@@ -20,7 +39,7 @@ export default function Home() {
             background: "linear-gradient(#000,#000) padding-box,linear-gradient(270deg, #2E27FE 0%, #9A12FF 73.96%, #CD05FF 100%) border-box"
           }}
           className="font-inter font-bold text-sm text-white px-[45px] py-3 border-2 border-transparent rounded-full">Learn More</button>
-      </div>
+      </div> */}
     </>
   )
 }
