@@ -22,7 +22,6 @@ export default function Home() {
       <Header />
       <HeroSection />
       <VideoSection />
-      <SponsorsSection />
       <RoadmapSection />
       <PricingSection />
       <TestimonialSection />

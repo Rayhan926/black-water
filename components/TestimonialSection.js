@@ -9,13 +9,17 @@ function TestimonialSection() {
     const windowWidth = useWindowWidth()
 
     useEffect(() => {
-        console.log({ width: window.innerWidth });
-        containerRef.current.style.width = ((windowWidth - 1110) / 2) + 1110 + 'px'
+        if (windowWidth > 1100) {
+            containerRef.current.style.width = ((windowWidth - 1110) / 2) + 1110 + 'px'
+        } else {
+            containerRef.current.style.width = 'auto'
+
+        }
     }, [containerRef, windowWidth])
 
     return (
-        <section className="mt-[200px] mb-20" >
-            <div ref={containerRef} className="ml-auto grid grid-cols-[360px,auto] gap-[114px] overflow-hidden">
+        <section className="mt-[90px] md:mt-[200px] mb-20" >
+            <div ref={containerRef} className="ml-auto px-5 xl:px-0 grid grid-cols-1 lg:grid-cols-[360px,auto] gap-[114px] overflow-hidden">
                 <div className="flex flex-col justify-center" >
                     <h2 className="title_md">What are our clients saying about us?</h2>
                     <p className="subtitle_md mt-[22px] mb-[32px]">
@@ -41,6 +45,16 @@ function TestimonialSection() {
                             pagination={{
                                 clickable: true,
                                 el: '#pagination_elm'
+                            }}
+                            breakpoints={{
+                                0: {
+                                    slidesPerView: 1.2,
+                                    spaceBetween: 15
+                                },
+                                775: {
+                                    slidesPerView: 1.7,
+                                    spaceBetween: 20
+                                }
                             }}
                         >
                             <SwiperSlide><Testimonial /></SwiperSlide>

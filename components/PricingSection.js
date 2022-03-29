@@ -1,15 +1,15 @@
 function PricingSection() {
     return (
-        <section className="mt-[158px]" >
+        <section className="mt-[140px] md:mt-[158px]" >
             <div className="container text-center">
                 <div className="title_md">Insert a long sentence about the pricing structure.</div>
                 <p className="subtitle_md mt-3">Magna eu cras amet leo. Id ultrices tortor convallis vivamus at pellentesque.</p>
             </div>
-            <div className="container grid grid-cols-[358px,auto] gap-[22px] my-[58px]">
+            <div className="container grid grid-cols-1 md:grid-cols-[358px,auto] gap-[22px] my-[58px]">
 
                 {/* Left Price Plan --Start-- */}
                 <div
-                    className="border border-transparent w-full rounded-[30px] overflow-hidden"
+                    className="border-[1.5px] lg:border border-transparent w-full rounded-[30px] overflow-hidden"
                     style={{
                         background: "linear-gradient(#000, #000) padding-box, linear-gradient(270deg, #2E27FE 0%, #9A12FF 73.96%, #CD05FF 100%) border-box"
                     }}
@@ -18,7 +18,7 @@ function PricingSection() {
                         style={{
                             backgroundImage: "url('/img/price_paln_1_bg.png')"
                         }}
-                        className="bg-cover bg-no-repeat bg-bottom"
+                        className="bg-cover bg-no-repeat h-full bg-bottom"
                     >
                         <div className="w-full h-[170px] flex flex-col items-center justify-center">
                             <h6 className="text-white font-lufga-bold text-sm !leading-[97.5%]" >Plan #1</h6>
@@ -27,7 +27,7 @@ function PricingSection() {
                         </div>
                         <Devider />
 
-                        <div className="pt-8 px-[34px]">
+                        <div className="pt-8 px-[20px] lg:px-[34px]">
                             <div className="flex flex-wrap justify-between">
                                 <h6 className="text-white font-lufga-bold text-lg" >+ $325</h6>
                                 <p className="subtitle_sm">Management Fee</p>
@@ -72,7 +72,7 @@ function PricingSection() {
 
                 {/* Right Price Plan --Start-- */}
                 <div
-                    className="border border-transparent w-full rounded-[30px] overflow-hidden"
+                    className="border-[1.5px] lg:border border-transparent w-full rounded-[30px] overflow-hidden"
                     style={{
                         background: "linear-gradient(#000, #000) padding-box, linear-gradient(270deg, #2E27FE 0%, #9A12FF 73.96%, #CD05FF 100%) border-box"
                     }}
@@ -84,8 +84,8 @@ function PricingSection() {
                         className="bg-cover bg-no-repeat bg-bottom h-full"
                     >
 
-                        <div className="w-full h-[170px] grid grid-cols-[auto,230px] content-center px-[54px]">
-                            <div>
+                        <div className="w-full lg:h-[170px] grid grid-cols-1 gap-y-10 lg:gap-y-0 py-12 lg:py-0 lg:grid-cols-[auto,230px] content-center px-5 lg:px-[54px]">
+                            <div className="flex flex-col items-center lg:block" >
                                 <h6 className="text-white font-lufga-bold text-sm !leading-[97.5%]" >Plan #2</h6>
                                 <h1 className="title_md mt-3">$1000.00</h1>
                                 <p className="mt-1.5 subtitle_sm">PER MINER</p>
@@ -103,13 +103,13 @@ function PricingSection() {
                         </div>
                         <Devider />
 
-                        <div className="pt-8 px-[54px]">
+                        <div className="pt-8 px-5 lg:px-[54px]">
                             <h6 className="text-white font-lufga-bold text-sm" >Plan Title</h6>
                             <p className="subtitle_md mt-3">
                                 Mauris metus enim eget id cursus interdum sit mauris magnis. Egestas convallis aenean etiam justo. Nunc at enim fringilla est et.
                             </p>
 
-                            <div className="grid grid-cols-2 mt-[57px] gap-y-[35px] gap-x-[20px]">
+                            <div className="pr-8 lg:px-0 grid grid-cols-1 lg:grid-cols-2 mt-[57px] gap-y-[35px] gap-x-[20px]">
                                 <div>
                                     <h6 className="flex items-center gap-2.5 text-white font-lufga-bold text-sm">
                                         <img src="/img/icons8_select_all.svg" width={24} height={24} alt="icons8_select_all" />
@@ -148,7 +148,7 @@ function PricingSection() {
                                 </div>
                             </div>
 
-                            <div className="mt-[50px]">
+                            <div className="mt-[50px] mb-6 lg:mb-[50px]">
                                 <button className="font-inter duration-150 font-bold text-sm px-[45px] py-3 border-[1.5px] border-white rounded-full bg-white hover:bg-transparent group">
                                     <span className="gradient_contact_text group-hover:white_contact_text">
                                         Contact Us

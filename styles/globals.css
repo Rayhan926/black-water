@@ -9,16 +9,16 @@ body {
 
 @layer components {
    .title_lg {
-      @apply text-white text-5xl md:text-6xl font-lufga-bold font-bold !leading-[140%];
+      @apply text-white text-5xl lg:text-6xl font-lufga-bold font-bold !leading-[140%];
    }
    .title_md {
-      @apply text-white text-3xl md:text-4xl font-lufga-bold font-bold !leading-[120%];
+      @apply text-white text-3xl lg:text-4xl font-lufga-bold font-bold !leading-[120%];
    }
    .title_sm {
-      @apply text-white text-xl md:text-2xl font-lufga-bold font-bold !leading-[89%];
+      @apply text-white text-xl lg:text-2xl font-lufga-bold font-bold !leading-[89%];
    }
    .title_xs {
-      @apply text-white text-base md:text-lg font-lufga-bold font-bold !leading-[89%];
+      @apply text-white text-base lg:text-lg font-lufga-bold font-bold !leading-[89%];
    }
    .subtitle_md {
       @apply text-gray text-base font-inter font-normal !leading-[156.5%];
@@ -46,6 +46,19 @@ body {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+   }
+
+   .card_bg {
+      background-image: url("../public/img/card_border.png");
+   }
+
+   .card_bg_unset {
+      background-image: unset;
+   }
+
+   .mobile_sidebar_gradeint {
+      background: linear-gradient(#000, #000) padding-box,
+         linear-gradient(180deg, #2e27fe 0%, #9a12ff 100%) border-box;
    }
 }
 

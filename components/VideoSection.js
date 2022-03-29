@@ -1,3 +1,4 @@
+import SponsorsSection from "./SponsorsSection"
 import VideoPlayer from "./VideoPlayer"
 
 const cards = [
@@ -35,9 +36,16 @@ const cards = [
 
 function VideoSection() {
     return (
-        <section className="mt-[130px]">
+        <section
+            style={{
+                backgroundImage: "url('/img/body_bg_left_croped.png')",
+            }}
+            className="mt-[70px] lg:mt-[130px] bg-no-repeat bg-left-top">
+
+
+
             <div className="container">
-                <h2 className="title_md text-center md:w-[35%] mx-auto" >Insert a title sentence here for benefits.</h2>
+                <h2 className="title_md text-center lg:w-[35%] mx-auto" >Insert a title sentence here for benefits.</h2>
             </div>
             <div className="container_sm mt-[50px]">
                 <div className="w-full border border-transparent overflow-hidden rounded-[30px]"
@@ -50,14 +58,22 @@ function VideoSection() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col items-center mt-10">
-                <h4 className="title_sm">Video Title Here</h4>
-                <p className="subtitle_md mt-[7px] sm:w-[320px] text-center">Magna eu cras amet leo. Id ultrices tortor convallis vivamus at pellentesque.</p>
-            </div>
-            <div className="container_sm mt-[72px]">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                    {cards.map((card, index) => <Card {...card} key={index} />)}
+            <div
+                className="pt-10 bg-no-repeat bg-right"
+                style={{
+                    backgroundImage: "url('/img/body_bg_right.png')",
+                }}
+            >
+                <div className="flex flex-col items-center px-5 lg:px-0">
+                    <h4 className="title_sm">Video Title Here</h4>
+                    <p className="subtitle_md mt-[7px] sm:w-[320px] text-center">Magna eu cras amet leo. Id ultrices tortor convallis vivamus at pellentesque.</p>
                 </div>
+                <div className="container_sm mt-[72px]">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        {cards.map((card, index) => <Card {...card} key={index} />)}
+                    </div>
+                </div>
+                <SponsorsSection />
             </div>
         </section>
     )
@@ -69,12 +85,9 @@ export default VideoSection
 const Card = ({ iconSrc, title, subtitle }) => {
     return (
         <div
-            style={{
-                backgroundImage: "url('/img/card_border.png')"
-            }}
-            className="bg-no-repeat"
+            className="lg:card_bg bg-no-repeat mobile_sidebar_gradeint border-[1.5px] lg:border-0 border-transparent rounded-[30px]"
         >
-            <div className="px-[67px] py-[55px]">
+            <div className="px-[25px] lg:px-[67px] py-[25px] lg:py-[55px]">
                 <img src={iconSrc} alt={title} className="w-6 h-6 object-cover inline-block mb-3" />
                 <h6 className="title_xs mb-2.5">{title}</h6>
                 <p className="subtitle_md">{subtitle}</p>

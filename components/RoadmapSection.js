@@ -23,7 +23,7 @@ const roadmaps = [
 
 function RoadmapSection() {
     return (
-        <section className="mt-[145px]" >
+        <section>
             <div className="container">
                 <div className="flex flex-col items-center text-center">
                     <h2 className="title_md">Onboarding Process</h2>
@@ -31,7 +31,11 @@ function RoadmapSection() {
 
                 </div>
 
-                <div className="mt-[120px] relative pt-[53px] pb-[110px]">
+                <div
+                    style={{
+                        backgroundImage: "url('/img/roadmap_bg.png')",
+                    }}
+                    className="mt-[120px] relative pt-[53px] pb-[53px] lg:pb-[110px] bg-center bg-no-repeat">
 
                     <div className="absolute -translate-x-[7px] lg:left-1/2 lg:-translate-x-1/2 bottom-full flex justify-center flex-col lg:items-center gap-3" >
                         <p className="text-white text-sm font-lufga-bold" >Start</p>
@@ -57,8 +61,8 @@ function RoadmapSection() {
                                 const isOdd = (index + 1) % 2 !== 0
 
                                 return isOdd ?
-                                    <LeftSideRoadmap step={index + 1} roadmap={roadmap} /> :
-                                    <RightSideRoadmap step={index + 1} roadmap={roadmap} />
+                                    <LeftSideRoadmap step={index + 1} roadmap={roadmap} key={index} /> :
+                                    <RightSideRoadmap step={index + 1} roadmap={roadmap} key={index} />
                             })
                         }
                     </div>
@@ -77,7 +81,7 @@ const RoadmapCard = ({ iconSrc, title, description }) => {
             style={{
                 background: "linear-gradient(#000, #000) padding-box,linear-gradient(180deg, #2E27FE 0%, #9A12FF 100%) border-box"
             }}
-            className="lg:w-[356px] rounded-[30px] border-2 border-transparent pl-[42px] pt-8 pb-10 pr-6">
+            className="sm:w-[500px] lg:w-[356px] rounded-[30px] border-2 border-transparent pl-[42px] pt-8 pb-10 pr-6">
             <img src={iconSrc} width={36} height={36} />
             <h6 className="text-sm text-white font-lufga-bold mt-5 mb-1.5">{title}</h6>
             <p className="subtitle_sm font-lufga-regular">{description}</p>
