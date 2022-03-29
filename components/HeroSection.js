@@ -1,8 +1,6 @@
-import Image from "next/image";
-
 function HeroSection() {
     return (
-        <section>
+        <section className="mt-[60px]" >
             <div className="container grid grid-cols-[45%,auto]">
                 <div className="flex flex-col justify-center">
                     <h1 className="text-white font-lufga-bold text-[96px] !leading-[89%]">Mine the <span className='gradient_future'>Future</span> of Money.</h1>
