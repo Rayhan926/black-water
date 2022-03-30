@@ -58,7 +58,7 @@ function PricingSection() {
                                     <p className="subtitle_sm text-white">Gravida vitae faucibus feugiat quis. </p>
                                 </div>
                             </div>
-                            <div className="mt-[60px] pb-[60px] flex justify-center">
+                            <div className="mt-[60px] pb-8 lg:pb-[60px] flex md:justify-center">
                                 <button className="font-inter duration-150 font-bold text-sm text-white px-[45px] py-3 border-[1.5px] border-white rounded-full hover:bg-white group">
                                     <span className="group-hover:gradient_contact_text" >
                                         Contact Us
@@ -148,7 +148,7 @@ function PricingSection() {
                                 </div>
                             </div>
 
-                            <div className="mt-[50px] mb-6 lg:mb-[50px]">
+                            <div className="mt-[50px] mb-8 lg:mb-[50px]">
                                 <button className="font-inter duration-150 font-bold text-sm px-[45px] py-3 border-[1.5px] border-white rounded-full bg-white hover:bg-transparent group">
                                     <span className="gradient_contact_text group-hover:white_contact_text">
                                         Contact Us
